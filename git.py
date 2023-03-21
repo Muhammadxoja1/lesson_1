@@ -9,8 +9,16 @@ for user in users_list:
         current_user = user
         break
 
+
 if not current_user:
     print("Пользователь не найден!")
     exit()
 
+
+db_login, db_password = current_user
+if user_password != db_password:
+    print('Неправильный пароль: ')
+    exit()
+
 print('Успешно вошли на свой аккаунт!')
+
